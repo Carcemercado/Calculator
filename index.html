@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator by Carlos Arce</title>
+    <meta name="description" content="Simple calculator created for Idea Entity interview by Carlos Arce">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Calculator</h1>
+            <h2>Created by Carlos Arce</h2>
+        </header>
+
+        <section>
+            <!--Display screen for the calculator, disabled to avoid unwanted input.-->
+            <input type="text" class="calculator-screen" value="" disabled />
+
+            <div class="calculator-buttons">
+                <!--Unicode samples from W3Schools used for HTML operator symbols
+                These buttons will hold the operators for the calculator-->
+                <button type="button" class="operator" value="+">&plus;</button>
+                <button type="button" class="operator" value="-">&minus;</button>
+                <button type="button" class="operator" value="*">&times</button>
+                <button type="button" class="operator" value="/">&divide</button>
+                <!--End operator buttons-->
+
+                <!--These buttons will hold the remaining buttons for the calculator.
+                The order of the buttons will follow standard calculator configurations-->
+
+                <!--Number buttons-->
+                <button type="button" value="7">7</button>
+                <button type="button" value="8">8</button>
+                <button type="button" value="9">9</button>
+                <button type="button" value="4">4</button>
+                <button type="button" value="5">5</button>
+                <button type="button" value="6">6</button>
+                <button type="button" value="1">1</button>
+                <button type="button" value="2">2</button>
+                <button type="button" value="3">3</button>
+                <button type="button" value="0">0</button>
+                <!--End number buttons-->
+
+                <!--Other calculator functionalities.-->
+                <button type="button" class="decimal" value=".">.</button>
+                <button type="button" class="clear" value="clear">C</button>
+                <button type="button" class="equal-sign operator" value="=">=</button>
+                <!--End other calculator functionalities-->
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
