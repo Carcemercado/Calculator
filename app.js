@@ -4,6 +4,7 @@
  */
 const calculator = {
   //Holds string that represents user input. This will be the number on calculator display.
+  //This will hold user input.
   displayValue: "0",
   //Holds the first digit used for the expression
   firstOperand: null,
@@ -14,6 +15,18 @@ const calculator = {
 };
 
 /**
+ * Application functions
+ */
+
+ /**
+  * Input user digit on display box. Has digit as parameter.
+  */
+function inputDigit(digit) {
+  const { displayValue } = calculator;
+  // Overwrite `displayValue` if the current value is '0' otherwise append to it
+  calculator.displayValue = displayValue === "0" ? digit : displayValue + digit;
+}
+/**
  * Update display function will change calculator display based on user input
  * query selector used to grab calculator screen class from DOM.
  * Add value to calculator screen.
@@ -22,7 +35,31 @@ function updateDisplay() {
   const display = document.querySelector(".calculator-screen");
   display.value = calculator.displayValue;
 }
-
+/**
+ * Input decimal once on display. Has dot as a paramenter to be passed.
+ */
+function inputDecimal(dot) {
+  //Check if the displayValue does not contain a decimal point
+  if (!calculator.displayValue.includes(dot)) {
+    //Append the decimal point
+    calculator.displayValue += dot;
+  }
+}
+/**
+ * Function to handle operators.
+ * ParseFloat converts displayValue into a number and passes the result to calculator firstOperant
+ * if firstOperand is null. If value is assigned to firstOperand, waitForSecondOperand becomes true.
+ * If true, indicates SecondOperand is ready to begin. Also sets calculator.operator to the value clicked.
+ */
+function operatorHandler(nextOperator){
+    const {firstOperand, displayValue, operator} = calculator;
+    const inputValue = parseFloat(displayValue);
+        if(firstOperand === null){
+            calculator.firstOperand = inputValue;
+        }
+        calculator.waitForSecondOperand = true;
+        calculator.operator = nextOperator;
+}
 updateDisplay();
 
 /**
@@ -45,14 +82,22 @@ buttons.addEventListener("click", event => {
   }
   if (target.classList.contains("operator")) {
     console.log("operator", target.value);
+    operatorHandler(target.value);
+    calculator.operator = nextOperator;
     return;
   }
-  if (target.classList.contains(".decimal")) {
+  if (target.classList.contains("decimal")) {
     console.log("decimal", target.value);
+    inputDecimal(target.value);
+    updateDisplay();
     return;
   }
   if (target.classList.contains("clear")) {
     console.log("clear", target.value);
   }
   console.log("digit", target.value);
+  //Call the inputDigit funtion to log user input. Call update display to show user input.
+    inputDigit(target.value);
+    updateDisplay();
 });
+
