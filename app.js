@@ -87,7 +87,8 @@ const performCalculation = {
   "/": (firstOperand, secondOperand) => firstOperand / secondOperand,
   "*": (firstOperand, secondOperand) => firstOperand * secondOperand,
   "+": (firstOperand, secondOperand) => firstOperand + secondOperand,
-  "-": (firstOperand, secondOperand) => firstOperand - secondOperand
+  "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
+  "=": (firstOperand, secondOperand) => firstOperand - secondOperand
 };
 /**
  * Function to reset calculator
