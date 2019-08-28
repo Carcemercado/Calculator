@@ -25,9 +25,9 @@ Used for calculator logic.
 
 ## Tools
 
-* Visual Studio Code
-* W3Schools
-* Mozilla MDN
+* Visual Studio Code - to write and debug code. Also create testing environment.
+* W3Schools - button press, monochromatic color scheme.
+* Mozilla MDN - html syntax and JavaScript functions.
 
 ## Instructions
 Use the mouse to input 1 digit followed by the operator followed by a second digit. Click the equals button to obtain the result. 
