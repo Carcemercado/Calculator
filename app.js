@@ -55,7 +55,7 @@ function inputDecimal(dot) {
  */
 function operatorHandler(nextOperator) {
   const { firstInput, displayValue, operator } = calculator;
-  const inputValue = parseFloat(displayValue);
+  const inputValue = parseFloat(displayValue); //parseFloat() parses a string and returns a floating point number. Returns number not as string.
   //Prevents double input of an operator
   if (operator && calculator.waitingForsecondInput) {
     calculator.operator = nextOperator;
@@ -82,7 +82,7 @@ const performCalculation = {
   "*": (firstInput, secondInput) => firstInput * secondInput,
   "+": (firstInput, secondInput) => firstInput + secondInput,
   "-": (firstInput, secondInput) => firstInput - secondInput,
-  "=": (secondInput) => secondInput
+  "=": secondInput => secondInput
 };
 
 /**

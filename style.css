@@ -16,20 +16,20 @@ body {
   margin: 0;
   padding: 0;
 }
-h1,
-h2 {
-  font-weight: 300;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
-}
 
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
 h1,
-h2,
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Orbitron', sans-serif, Arial, Helvetica, sans-serif;
+  margin: 20px;
+  font-size: 50px;
 }
 .calculator {
   border: 1px solid gray;
@@ -37,6 +37,16 @@ h2,
   box-shadow: 5px 10px 18px gray;
   padding: 10px;
   position: relative;
+}
+@media only screen and (max-width: 700px){
+    .calculator, .container, button{
+        width: 100%;
+        height: auto;
+        grid-gap: 0px;
+        padding: 0px;
+        position: relative;
+        margin: 0;
+    }
 }
 .calculator-screen {
   width: 100%;
@@ -101,8 +111,8 @@ button:active {
 .calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  padding: 30px;
+  grid-gap: 15px;
+  padding: 20px;
 }
 /**
 * Color scheme designed using color picker from W3Schools.
