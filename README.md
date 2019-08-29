@@ -7,6 +7,7 @@ Calculator web app for Idea Entity
 * [Code](#code)
 * [Tools](#tools)
 * [Instructions](#Instructions)
+* [Download](#Download)
 
 ## Information
 
@@ -31,3 +32,6 @@ Used for calculator logic.
 
 ## Instructions
 Use the mouse to input 1 digit followed by the operator followed by a second digit. Click the equals button to obtain the result. 
+
+## Download
+Clone repository to download zip file. Extract zip file to use calculator.
