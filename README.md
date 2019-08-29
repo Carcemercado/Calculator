@@ -11,7 +11,7 @@ Calculator web app for Idea Entity
 
 ## Information
 
-This webs based calculator showcases my web design skills and my development skills. HTML, CSS, and JavaScript is used to make and handle calculator look, feel, and logic. This web app contains responsive features content.
+This web based calculator showcases my web design skills and my development skills. HTML, CSS, and JavaScript is used to make and handle calculator look, feel, and logic. This web app contains responsive features content.
 
 ## Code
 
